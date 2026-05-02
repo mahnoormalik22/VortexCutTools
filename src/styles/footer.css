@@ -1,0 +1,167 @@
+.footer {
+  background: var(--bg);
+  padding-top: 4rem;
+  border-top: 2px solid var(--accent);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+/* Brand Column */
+.footer-brand {
+  padding-right: 2rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-h);
+  margin-bottom: 1rem;
+}
+
+.footer-logo .logo-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--accent);
+}
+
+.footer-logo span {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.footer-tagline {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Footer Columns */
+.footer-column {
+  min-width: 0;
+}
+
+.footer-heading {
+  font-family: var(--display);
+  font-size: 0.9375rem;
+  letter-spacing: 2px;
+  color: var(--text-h);
+  margin-bottom: 1.25rem;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-list a {
+  font-size: 0.875rem;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.footer-list a:hover {
+  color: var(--accent);
+}
+
+/* Address */
+.footer-address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-address p {
+  font-size: 0.875rem;
+  color: var(--text);
+}
+
+.footer-address a {
+  transition: color 0.2s ease;
+}
+
+.footer-address a:hover {
+  color: var(--accent);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  background: var(--surface);
+  padding: 1.25rem 0;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--surface2);
+  border-radius: 50%;
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.footer-social a:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .footer-brand {
+    grid-column: span 2;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-brand {
+    grid-column: 1;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

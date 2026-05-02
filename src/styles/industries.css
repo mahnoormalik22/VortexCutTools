@@ -1,0 +1,72 @@
+.industries {
+  background: var(--surface);
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.industries-title {
+  font-family: var(--display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  color: var(--text-h);
+  letter-spacing: 3px;
+  margin-bottom: 2.5rem;
+  padding-left: 2rem;
+}
+
+.industries-scroll {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.industries-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.industries-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+}
+
+.industry-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.5rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.industry-chip svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.industry-chip:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--text-h);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .industries {
+    padding: 3rem 0;
+  }
+  
+  .industries-title {
+    margin-bottom: 2rem;
+  }
+}
